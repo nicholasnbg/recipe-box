@@ -3,10 +3,14 @@
     margin-bottom: 20px;
     border-radius: .5rem;
     border: 1px solid #a9adac;
+    transition: all 1s ease-in-out;
+    background: #fcfcfc;
 }
 
 .ingredients {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
 }
 
 .recipeListItem h2 {

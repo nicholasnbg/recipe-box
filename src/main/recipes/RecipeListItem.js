@@ -2,16 +2,24 @@ import React from 'react';
 import './RecipeListItem.css';
 
 class RecipeListItem extends React.Component {
+    state ={
+        isShowing: false
+    }
+
+    toggleShowing = () => {
+        this.state.isShowing ? this.setState({isShowing: false}) : this.setState({isShowing: true});
+    }
 
     render(){
-        const { name, ingredients, showing }=this.props;
-        console.log(showing);
+        const { name, ingredients, id }=this.props;
+
+        const displayStyle={"display":this.state.isShowing ? '' : 'none'};
 
         return(
-            <li className="recipeListItem">
+            <li className="recipeListItem" id={name} onClick={this.toggleShowing}>
                 <h2>{name}</h2> 
-                {showing === true &&(
-                    <div className="ingredients">
+                {/* {this.state.isShowing === true &&( */}
+                    <div className="ingredients" style={displayStyle}>
                         {ingredients.map((ingredient, i) => (
                             <div key={i}>
                                 <span>{ingredient}</span>
@@ -21,7 +29,7 @@ class RecipeListItem extends React.Component {
                             </div>
                         ))}
                     </div>
-                )}
+                {/* )} */}
                 
             </li>
         )
