@@ -1,0 +1,18 @@
+.recipeListItem {
+    padding: 20px 5px;
+    margin-bottom: 20px;
+    border-radius: .5rem;
+    border: 1px solid #a9adac;
+}
+
+.ingredients {
+    display: flex;
+}
+
+.recipeListItem h2 {
+    margin-bottom: 15px;
+}
+
+.seperator {
+    padding: 0 5px;
+}
