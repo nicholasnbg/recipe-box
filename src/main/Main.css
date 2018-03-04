@@ -1,6 +1,6 @@
 .main{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 25px 15%;
+    flex-direction: row;
+    padding: 25px 10px; 
 }

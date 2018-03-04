@@ -1,0 +1,21 @@
+.addRecipeForm {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.addRecipeForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.addRecipeForm input, .addRecipeForm textarea {
+    margin-top: 30px;
+}
+
+.addRecipeForm button {
+    margin-top: 30px;
+    width: 100px;
+    align-self: center;
+}

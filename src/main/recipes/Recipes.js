@@ -4,23 +4,27 @@ import RecipeListItem from './RecipeListItem';
 
 class Recipes extends React.Component {
 
+    renderRecipe = key =>{
+        const recipe = this.props.recipes[key];
+        return (
+            <div className="recipeListItemContainer" key={key}>
+                <RecipeListItem 
+                name={recipe.name} 
+                ingredients={recipe.ingredients}
+                showing={recipe.showing}
+                onRecipeClick={this.props.onRecipeClick}
+            />
+            </div>
+        )
+    }
+
     render(){
         const recipes = this.props.recipes;
-        console.log(recipes);
         return(
             <div className="recipes">
-                <ul className="recipes">
-                    {recipes.map(recipe => (
-                        <RecipeListItem 
-                        key={recipe.key} 
-                        name={recipe.name} 
-                        ingredients={recipe.ingredients}
-                        showing={recipe.showing}
-                        id={recipe.key} 
-                        onRecipeClick={this.props.onRecipeClick}
-                        />
-                    ))}
-                </ul>
+                <div className="recipes">
+                    {Object.keys(recipes).map(this.renderRecipe)}
+                </div>
             </div>
             
         )

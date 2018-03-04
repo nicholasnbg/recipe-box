@@ -16,9 +16,8 @@ class RecipeListItem extends React.Component {
         const displayStyle={"display":this.state.isShowing ? '' : 'none'};
 
         return(
-            <li className="recipeListItem" id={name} onClick={this.toggleShowing}>
+            <div className="recipeListItem" id={name} onClick={this.toggleShowing}>
                 <h2>{name}</h2> 
-                {/* {this.state.isShowing === true &&( */}
                     <div className="ingredients" style={displayStyle}>
                         {ingredients.map((ingredient, i) => (
                             <div key={i}>
@@ -28,10 +27,8 @@ class RecipeListItem extends React.Component {
                                 )}    
                             </div>
                         ))}
-                    </div>
-                {/* )} */}
-                
-            </li>
+                    </div>                
+            </div>
         )
     }
 }
