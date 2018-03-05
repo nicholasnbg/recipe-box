@@ -1,8 +1,4 @@
 .recipes {
-    padding: 25px;
-    background: #a9adac;
-    border: #1f1f1f;
-    border-radius: 1rem;
     grid-column: span 1 / -1;
     
 }
