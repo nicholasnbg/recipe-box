@@ -3,7 +3,7 @@
     background: #a9adac;
     border: #1f1f1f;
     border-radius: 1rem;
-    flex-grow: 4;
+    grid-column: span 1 / -1;
     
 }
 
